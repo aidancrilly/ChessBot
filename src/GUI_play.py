@@ -43,8 +43,8 @@ class Interface():
 
 		self.dx = 56.5
 		self.x_offset = 125.0
-		self.dy = -56.5
-		self.y_offset = 545.0
+		self.dy = -56.0
+		self.y_offset = 540.0
 
 		img_dir = "../imgs/"
 
@@ -87,17 +87,17 @@ class Interface():
 
 		self.canvas._tkcanvas.pack(side=Tk.TOP, fill=Tk.BOTH, expand=1)
 
-		self.q_button = Tk.Button(master=self.root, text='Quit', command=self._quit)
-		self.q_button.pack(side=Tk.RIGHT, padx = 2)
+		self.q_button = Tk.Button(master=self.root, text='Quit', command=self._quit, width = 10)
+		self.q_button.pack(side=Tk.RIGHT, padx = 10, pady=10)
 
 		self.m_label = Tk.Label(master=self.root, text='Your move:')
-		self.m_label.pack(side=Tk.LEFT, pady = 10, padx = 5)
+		self.m_label.pack(side=Tk.LEFT, padx = 5, pady=10)
 
-		self.m_entry = Tk.Entry(master=self.root, width = 5)
-		self.m_entry.pack(side=Tk.LEFT, pady = 10, padx = 5)
+		self.m_entry = Tk.Entry(master=self.root, width = 25)
+		self.m_entry.pack(side=Tk.LEFT, padx = 5, pady=10)
 
-		self.m_button = Tk.Button(master=self.root, text='Move', command=self._move)
-		self.m_button.pack(side=Tk.LEFT, padx = 2)
+		self.m_button = Tk.Button(master=self.root, text='Move', command=self._move, width = 10)
+		self.m_button.pack(side=Tk.LEFT, padx = 5, pady=10)
 
 		Tk.mainloop()
 
